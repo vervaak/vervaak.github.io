@@ -1,0 +1,46 @@
+html {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+body {
+    padding-bottom: 40px;
+    font-size: 1rem;
+    line-height: 22px;
+    color: #323336;
+}
+
+nav {
+    padding-top: 4rem;
+    padding-bottom: 4rem; 
+}
+
+nav ul {
+     list-style-type: none;
+     padding: 0px;
+}
+
+nav li a{
+    border-top: 1px solid  #eee;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+nav li a{
+    color: grey;
+    text-decoration: none;
+}
+
+nav .home{
+    height: 200px;
+}
+
+content {
+    padding-top: 4rem;
+    padding-bottom: 4rem; 
+    line-height: 200%;    
+}
+
+content .header{
+    color: grey;
+    font-weight: 200;
+}

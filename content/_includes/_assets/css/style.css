@@ -1,0 +1,11 @@
+html {
+    font: 62.5%/1.65 "Open Sans", sans-serif;
+    box-sizing: content-box;
+}
+
+body {
+    padding-bottom: 40px;
+    font-size: 1.3rem;
+    line-height: 22px;
+    color: #323336;
+}
