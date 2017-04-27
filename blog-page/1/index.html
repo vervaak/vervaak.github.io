@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yet another awesome site.">
+
+    <title>Sculptor Lai - Blog</title>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/all.css">
+    <link rel="stylesheet" href="/assets/css/skeleton_css/skeleton.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div class="container">
+    <nav class="two columns">
+        <style>
+
+#nav-toggle{
+    display: none;
+}
+
+#nav-toggle-label{
+	display: none;
+}
+
+#nav-toggle + div a:hover{
+	background-color: #ccc;
+	color: white;
+}
+
+#nav-toggle + div a{
+	display: block;
+	text-align: left;
+}
+
+#home{
+	text-align: center;
+}
+
+#home img{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 80px;
+}
+@media  only screen and (max-width: 700px) {
+	#nav-toggle-label{
+		display: block;
+		color: #333;
+		text-align: center;
+	}
+
+	#nav-toggle:checked + div{
+	    display: block;
+	}  
+
+	#nav-toggle + div{
+	    display: none;
+	} 
+
+	#nav-toggle + div a{
+		display: block;
+		text-align: center;
+	}
+}	
+</style>
+<div id="home">
+    <img src="/assets/images/name.jpg" />
+</div>
+<label id="nav-toggle-label" for="nav-toggle">MENU</label>
+<input id="nav-toggle" type="checkbox" />
+<div>
+	<ul>
+	    <li><a href="/">首頁／Home</a></li>
+	    <li><a href="/works/">作品／Works</a></li>
+	    <li><a href="/about/">關於／About</a></li>
+	    <li><a href="/blog/">文章／Essay</a></li>
+	    <li><a href="/about/">聯絡／Contact</a></li>
+	</ul>
+</div>    </nav>
+    <content class="ten columns">
+        
+    <div class="left-side">
+        
+            <article>
+                <p>
+                    <a href="/chiman-20160417/">寧靜致遠的美感體驗</a>
+                    <br>
+                    <small>Apreil 17, 2017</small>
+                    <br>
+                    每天清晨的散步，總會在中山北路七段的一幢住宅大樓前，與藝術家黎志文的石雕作品相遇。
+                </p>
+            </article>
+
+        
+        <div class="pagination">
+    
+    </div>    </div>
+
+
+    </content>
+</div>
+
+</body>
+</html>
