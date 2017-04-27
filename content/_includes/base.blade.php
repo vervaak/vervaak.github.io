@@ -14,6 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 
+    <link href="/assets/vendor/lightbox-master/css/lightbox.css" rel="stylesheet">
 
 </head>
 
@@ -27,6 +28,7 @@
         @yield('body')
     </content>
 </div>
-
+<script src="/assets/vendor/lightbox-master/js/lightbox.js"></script>
 </body>
 </html>
+

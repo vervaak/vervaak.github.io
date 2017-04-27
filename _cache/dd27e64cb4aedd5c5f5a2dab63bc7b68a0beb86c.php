@@ -47,9 +47,7 @@
 			$path  = str_replace("/Users/sijung/github/vervaak.github.io/content/","/", $image); 
 		 	$tagData  = mt_rand(); 
 		?>
-		<a href="#" data-featherlight="#<?php echo e($tagData); ?>"><div class="thumb-wrap"><img class="thumb" src="<?php echo e($path); ?>" /></div></a>
-		<div class="light-box" id="<?php echo e($tagData); ?>"><img src="<?php echo e($path); ?>" /></div>
-		
+		<a href="<?php echo e($path); ?>" data-lightbox="<?php echo e($tagData); ?>" data-title="My caption"><img class="thumb" src="<?php echo e($path); ?>" /></a>
 
 	<?php endforeach; ?>		
 
