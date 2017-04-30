@@ -3,6 +3,19 @@
 @section('pageTitle', '- Contact')
 
 @section('body')
+	<style>
+.splash-images{
+    width: 70% !important;
+    min-width: 720px !important;
+}
+
+@media only screen and (max-width: 550px) {
+    .splash-images{
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+	<style>
 	<div>
 		<img class="splash-images" src="@url('assets/images/contact_me.jpg')" />
 		<br/>
