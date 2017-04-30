@@ -21,7 +21,9 @@
 </head>
 
 <body>
+<style>
 
+</style>
 <div class="container">
 
     <nav class="two columns">

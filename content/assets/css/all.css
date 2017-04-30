@@ -25,3 +25,15 @@ content .header{
     color: grey;
     font-weight: 200;
 }
+
+.splash-images{
+    width: 70%;
+    min-width: 720px;
+}
+
+@media only screen and (max-width: 550px) {
+    .splash-images{
+        width: 100%;
+        min-width: 100%;
+    }
+}

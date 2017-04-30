@@ -3,13 +3,13 @@
 @section('pageTitle', '- Contact')
 
 @section('body')
-	<div class="five columns">
-		<img src="@url('assets/images/contact_me.jpg')" width="100%" />
+	<div>
+		<img class="splash-images" src="@url('assets/images/contact_me.jpg')" />
 		<br/>
-		<h4>歡迎您於我聯絡！</h4>
+		<h3>歡迎您於我聯絡！</h3>
 
 		email：sculptorlai@gmail.com<br/>
-		tel：+886 0923-625-372
+		tel：+886 0928-625-372
 	</div>
 
 

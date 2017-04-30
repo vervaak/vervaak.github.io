@@ -6,7 +6,7 @@
 
 #home img{
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	width: 80px;
 }
 
@@ -16,7 +16,7 @@
 
 #nav-bar{
 	background-color: white;
-	margin-bottom: 4rem;
+	margin-bottom: 30px;
 }
 
 ul.nav-items{
@@ -104,7 +104,7 @@ ul.nav-items a:hover{
 
 		$(window).scroll(function () {
 			var width = $(window).width();
-			if ($(window).scrollTop() > 350 && width < 550) {
+			if ($(window).scrollTop() > 300 && width < 550) {
 				$('#nav-bar-top').fadeIn();
 			}else{
 				$('#nav-bar-top').fadeOut();
