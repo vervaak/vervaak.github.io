@@ -6,7 +6,7 @@ pageTitle: - About
 
 
         <div class="ten columns">
-            <img src="@url('assets/images/about.JPG')"  width="100%">
+            <img src="@url('assets/images/about_me.JPG')"  width="100%">
             <br/>
             @markdown
 
