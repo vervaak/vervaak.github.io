@@ -16,76 +16,131 @@
 
     <link href="/assets/vendor/lightbox-master/css/lightbox.css" rel="stylesheet">
 
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+
 </head>
 
 <body>
 
 <div class="container">
+
     <nav class="two columns">
         <style>
-
-#nav-toggle{
-    display: none;
-}
-
-#nav-toggle-label{
-	display: none;
-}
-
-#nav-toggle + div a:hover{
-	background-color: #ccc;
-	color: white;
-}
-
-#nav-toggle + div a{
-	display: block;
-	text-align: left;
-}
 
 #home{
 	text-align: center;
 }
 
 #home img{
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 	width: 80px;
 }
-@media  only screen and (max-width: 700px) {
-	#nav-toggle-label{
+
+.nav-toggle{
+	display: none;
+}
+
+#nav-bar{
+	background-color: white;
+	margin-bottom: 4rem;
+}
+
+ul.nav-items{
+     list-style-type: none;
+     padding: 0px;
+}
+
+ul.nav-items a{
+	display: block;
+    border-top: 1px solid  #eee;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    color: grey;
+    text-decoration: none;    
+}
+
+ul.nav-items a:hover{
+	background-color: #ccc;
+	color: black;
+}
+
+#nav-bar-top{
+	display: none;
+}
+	
+@media  only screen and (max-width: 550px) {
+	.nav-toggle{
 		display: block;
 		color: #333;
 		text-align: center;
-	}
+		background-color: white;
+	} 
 
-	#nav-toggle:checked + div{
-	    display: block;
-	}  
-
-	#nav-toggle + div{
+	.nav-toggle + ul{
 	    display: none;
 	} 
 
-	#nav-toggle + div a{
-		display: block;
+	.nav-toggle + ul a{
 		text-align: center;
+	}
+
+	#nav-bar-top{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 100%;
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: white;
+		border-bottom: 1px solid #ddd;
 	}
 }	
 </style>
 <div id="home">
     <img src="/assets/images/name.jpg" />
 </div>
-<label id="nav-toggle-label" for="nav-toggle">MENU</label>
-<input id="nav-toggle" type="checkbox" />
-<div>
-	<ul>
+<div id="nav-bar" >
+	<div class="nav-toggle" onclick="myFunction(this)"> MENU </div>
+	<ul class="nav-items">
 	    <li><a href="/">首頁／Home</a></li>
 	    <li><a href="/works/">作品／Works</a></li>
 	    <li><a href="/about/">關於／About</a></li>
 	    <li><a href="/blog/">文章／Essay</a></li>
-	    <li><a href="/about/">聯絡／Contact</a></li>
+	    <li><a href="/contact/">聯絡／Contact</a></li>
 	</ul>
-</div>    </nav>
+</div>
+
+<script>
+
+	function myFunction(e){
+		if($(e).siblings( ".nav-items" ).css( "display" ) == "none"){
+			$(e).siblings( ".nav-items" ).css( "display", "block" );
+		}else{
+			$(e).siblings( ".nav-items" ).css( "display", "none" );
+		}			
+	}
+
+   $( document ).ready(function() {
+	    var nav = document.getElementById("nav-bar");
+	    var navClone = nav.cloneNode(true);
+	    navClone.style.display = "none";
+	    navClone.setAttribute("id", "nav-bar-top");
+	    document.body.appendChild(navClone);
+
+		$(window).scroll(function () {
+			var width = $(window).width();
+			if ($(window).scrollTop() > 350 && width < 550) {
+				$('#nav-bar-top').fadeIn();
+			}else{
+				$('#nav-bar-top').fadeOut();
+			}
+		});   			
+    });
+</script>
+
+    </nav>
     <content class="ten columns">
                     <h1>Sculptor Lai</h1>
 <p>While this is a pure <code>.md</code> <strong>file</strong>, you can still call variables the Blade way.</p>
@@ -101,8 +156,15 @@ This markdown won't **work**.
 <div style="color:blue;">
 <p>But this will <strong>work</strong>.</p><div>
                 </content>
+    <footer class="ten offset-by-two columns">
+        <div class="ten columns">
+        Copyright © 2017 Lai Chi-Man  <br/>
+        Site created by vervaak <br/>
+        Twitter: @vervaak<br/>
+        </div>
+    </footer>
 </div>
-<script src="/assets/vendor/lightbox-master/js/lightbox.js"></script>
+
 </body>
 </html>
 
