@@ -27,13 +27,13 @@ content .header{
 }
 
 .splash-images{
-    width: 70%;
-    min-width: 720px;
+    width: 70% !important;
+    min-width: 720px !important;
 }
 
 @media only screen and (max-width: 550px) {
     .splash-images{
-        width: 100%;
-        min-width: 100%;
+        width: 100% !important;
+        min-width: 100% !important;
     }
 }
