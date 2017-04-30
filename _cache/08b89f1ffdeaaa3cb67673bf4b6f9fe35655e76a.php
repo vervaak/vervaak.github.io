@@ -16,19 +16,29 @@
 
     <link href="/assets/vendor/lightbox-master/css/lightbox.css" rel="stylesheet">
 
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+
 </head>
 
 <body>
 
 <div class="container">
+
     <nav class="two columns">
         <?php echo $__env->make('_includes.navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     </nav>
     <content class="ten columns">
         <?php echo $__env->yieldContent('body'); ?>
     </content>
+    <footer class="ten offset-by-two columns">
+        <div class="ten columns">
+        Copyright © 2017 Lai Chi-Man  <br/>
+        Site created by vervaak <br/>
+        Twitter: @vervaak<br/>
+        </div>
+    </footer>
 </div>
-<script src="/assets/vendor/lightbox-master/js/lightbox.js"></script>
+
 </body>
 </html>
 

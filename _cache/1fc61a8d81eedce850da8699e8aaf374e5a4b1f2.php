@@ -4,7 +4,7 @@
 
             <?php $__env->startSection('body'); ?>
             <div class="ten columns">
-            <img src="<?php echo str_replace(['///', '//'], '/', $base_url.'/'.trim('assets/images/about.jpg', '/').'');  ?>"  width="100%">
+            <img src="<?php echo str_replace(['///', '//'], '/', $base_url.'/'.trim('assets/images/about.JPG', '/').'');  ?>"  width="100%">
             <br/>
             <?php echo \Katana\Markdown::parse(<<<'EOT'
 

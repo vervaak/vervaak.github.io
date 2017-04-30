@@ -10,8 +10,6 @@
 
             <h1>@yield('post::title')</h1>
 
-            <small>@yield('post::date')</small>
-
             @yield('post_body')
 
             <a href="@url('blog')">上一頁／Back</a>

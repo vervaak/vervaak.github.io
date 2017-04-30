@@ -25,12 +25,11 @@
 		    }
 
 			.thumb{
-				max-width: 375px;
+				max-width: 200px;
 			}
 
 		}		
 	</style>
-	<link href="//cdn.rawgit.com/noelboss/featherlight/1.7.2/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 <?php
 
 	$folder = '/Users/sijung/github/vervaak.github.io/content/assets/images/works';
@@ -46,13 +45,17 @@
 ?>	
 	@foreach($fileList as $image)
 		<?php 
-			$path  = str_replace("/Users/sijung/github/vervaak.github.io/content/","/", $image); 
-		 	$tagData  = mt_rand(); 
+			$originalFilePath = $image;
+			$path  = str_replace("/Users/sijung/github/vervaak.github.io/content/","/", $originalFilePath); 
+			$extension_pos = strrpos($path, '.'); 
+			$thumbPath = substr($path, 0, $extension_pos) . '_mobile' . substr($path, $extension_pos);
+			
+			$originalFileName  = str_replace("/Users/sijung/github/vervaak.github.io/content/assets/images/works","", $originalFilePath); 
+
+			$tagData = uniqid();
 		?>
-		<a href="{{$path}}" data-lightbox="{{$tagData}}" data-title="My caption"><img class="thumb" src="{{$path}}" /></a>
+		<a href="{{$path}}" data-lightbox="{{$tagData}}" data-title="{{$originalFileName}}"><img class="thumb" src="{{$thumbPath}}" /></a>
 
 	@endforeach		
-
-<script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.2/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>   
+<script src="/assets/vendor/lightbox-master/js/lightbox.js"></script> 
 @stop

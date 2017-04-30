@@ -143,13 +143,16 @@ class SiteBuilder
     private function adjustImageQualityAndSize($file)
     {
             
-        $newFileName = $file->getFilename();
+
+        $fileName = $file->getFilename();
+        $extension_pos = strrpos($fileName, '.'); // find position of the last dot, so where the extension starts
+        $newFileName = substr($fileName, 0, $extension_pos) . '_mobile' . substr($fileName, $extension_pos);
         $newFilePath = $file->getPath() . '/' . $newFileName;
 
         $image = new SimpleImage();
         $image
             ->fromFile($file->__toString())
-            ->bestFit(1080, 1080)
+            ->bestFit(480, 480)
             ->toFile($newFilePath, 'image/jpeg', 80);
     }
 
