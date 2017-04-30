@@ -3,7 +3,7 @@
 <?php $__env->startSection('pageTitle', '寧靜致遠的美感體驗'); ?>
 <?php $__env->startSection('post::title', '寧靜致遠的美感體驗'); ?>
 <?php $__env->startSection('post::date', 'Apreil 17, 2017'); ?>
-<?php $__env->startSection('post::brief', '每天清晨的散步，總會在中山北路七段的一幢住宅大樓前，與藝術家黎志文的石雕作品相遇。'); ?>
+<?php $__env->startSection('post::brief', '寧靜致遠的美感體驗 --黎志文石雕作品之賞析 文/簡丹'); ?>
 
             <?php $__env->startSection('post_body'); ?>
             <p><strong>寧靜致遠的美感體驗</strong>
